@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>抽一抽大师v2.0.1(Inside)</title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #ECF0F3;
+      border-radius: 8px;/*圆角*/
+      padding: 10px;           /*大小*/
+      box-shadow: 0 0px 100px rgba(0, 0, 0, 0.2);/*一级框阴影*/
+      text-align: center;
+      max-width: 650px;
+      width: 250%;
+    }
+    .student-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;/* 学生按钮与学生按钮间隔 */
+    }
+
+    .student {
+      padding: 5px;/* 学生按钮大小 */
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);/*阴影*/
+    }
+
+    .student.selected {
+      animation: enlargeAnimation 1s ease;
+    }
+
+    @keyframes enlargeAnimation {
+      0% {
+        transform: scale(1);
+      }
+
+      20% {
+        transform: scale(1.2);
+      }
+	30%{
+	transform: scale(6);
+	}
+      35%{
+	transform: scale(8);
+	}
+      45% {
+        transform: scale(9);
+      }
+      50% {
+        transform: scale(10);
+      }
+      60%{
+       transform: scale(9);
+      }
+	65%{
+	transform: scale(8);
+	}
+	70%{
+	transform: scale(6);
+	}
+      80% {
+        transform: scale(1.2);
+      }
+
+     
+    }
+
+    .roll-call-btn {
+      display: block;
+      margin: 5px auto;
+      padding: 8px 8px;
+
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 100px;
+      font-size: 18px;
+    }
+
+    .roll-call-btn:hover {
+
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #FFEFDB;
+      color: #333;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+    }
+
+
+
+    @keyframes float {
+      0% {
+        transform: translateY(-50%);
+      }
+
+      50% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    /* 这里是随机语录 */
+
+
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="quote-container">
+      <p class="quote" id="quoteText"></p>
+    </div>
+
+    <div class="student-list">
+      <div class="student">学生01</div>
+      <div class="student">学生02</div>
+      <div class="student">学生03</div>
+      <div class="student">学生04</div>
+      <div class="student">学生05</div>
+      <div class="student">学生06</div>
+      <div class="student">学生07</div>
+      <div class="student">学生08</div>
+      <div class="student">学生09</div>
+      <div class="student">学生10</div>
+      <div class="student">学生11</div>
+      <div class="student">学生12</div>
+      <div class="student">学生13</div>
+      <div class="student">学生14</div>
+      <div class="student">学生15</div>
+      <div class="student">学生16</div>
+      <div class="student">学生17</div>
+      <div class="student">学生18</div>
+      <div class="student">学生19</div>
+      <div class="student">学生20</div>
+      <div class="student">学生21</div>
+      <div class="student">学生22</div>
+      <div class="student">学生23</div>
+      <div class="student">学生24</div>
+      <div class="student">学生25</div>
+      <div class="student">学生26</div>
+      <div class="student">学生27</div>
+      <div class="student">学生28</div>
+      <div class="student">学生29</div>
+      <div class="student">学生30</div>
+      <div class="student">学生31</div>
+      <div class="student">学生32</div>
+      <div class="student">学生33</div>
+      <div class="student">学生34</div>
+      <div class="student">学生35</div>
+      <div class="student">学生36</div>
+      <div class="student">学生37</div>
+      <div class="student">学生38</div>
+      <div class="student">学生39</div>
+      <div class="student">学生40</div>
+      <div class="student">学生41</div>
+      <div class="student">学生42</div>
+      <div class="student">学生43</div>
+      <div class="student">学生44</div>
+
+
+    </div>
+  
+<body>
+  <a href="#">
+    <button id="rollCallBtn" class="roll-call-btn">抽取</button>
+  </a>
+</body>
+
+
+    <h1><div class="result">抽取结果：<span id="selectedStudent">还未生成结果，请点击开始抽取来获取结果</span></div>
+ </h1>   <hr>
+    <div class="footer">
+      <p>Version:2.0.11(Inside)抽一抽大师 by &copy; 2023~2024 Hayden AllRightsReserved.</p>
+    </div>
+  </div>
+
+
+  <script>
+    window.onload = function () {
+      var rollCallBtn = document.getElementById("rollCallBtn");
+      var studentList = document.querySelectorAll(".student");
+      var selectedStudent = document.getElementById("selectedStudent");
+      var resultDiv = document.querySelector(".result");
+
+      /*标题栏下随机语录*/
+      var quotes = [
+        "inside DEV"
+      ];
+
+      function getRandomQuote() {
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        return quotes[randomIndex];
+      }
+
+      function displayRandomQuote() {
+        var quoteText = document.getElementById("quoteText");
+        quoteText.textContent = getRandomQuote();
+      }
+
+
+      rollCallBtn.addEventListener("click", function () {
+        rollCallBtn.disabled = true; // 使按钮在动画期间不可点击，防止重复抽取
+        selectedStudent.style.color = ""
+        selectedStudent.textContent = "正在抽取中"; // Display "正在抽取中" during animation
+
+        var duration = 50 // 动画持续0.02秒
+        var interval = 10 // Interval between animations (10ms)
+        var startTime = Date.now();
+
+        /*displayRandomQuote();//展示随机语录*/
+
+        var animationInterval = setInterval(function () {
+          var elapsedTime = Date.now() - startTime;
+          var progress = Math.floor(elapsedTime / (duration / 5)) % 5;
+
+          if (progress === 0) {
+            selectedStudent.textContent = "正在抽取中0%.";
+          } else if (progress === 1) {
+            selectedStudent.textContent = "正在抽取中20%..";
+          } else if (progress === 2) {
+            selectedStudent.textContent = "正在抽取中60%...";
+          } else if (progress === 3) {
+            selectedStudent.textContent = "正在抽取中80%....";
+          } else if (progress === 4) {
+            selectedStudent.textContent = "正在抽取中100%.....";
+          }
+
+
+          if (elapsedTime >= duration) {
+            clearInterval(animationInterval);
+            var randomIndex = Math.floor(Math.random() * studentList.length);
+            var selected = studentList[randomIndex];
+
+            studentList.forEach(function (student) {
+              student.classList.remove("selected");
+              student.style.animation = "";
+            });
+
+            selected.classList.add("selected");
+            selectedStudent.textContent = selected.textContent;
+            selectedStudent.style.color = ""
+            resultDiv.style.display = "block";
+            rollCallBtn.disabled = false; // 使按钮可点击
+          } else {
+            studentList.forEach(function (student) {
+              student.style.animation = "";
+            });
+
+            var randomIndex = Math.floor(Math.random() * studentList.length);
+            var randomStudent = studentList[randomIndex];
+
+            randomStudent.animate(
+              [{ transform: "scale(1)" }, { transform: "scale(1.2)" }, { transform: "scale(1)" }],
+              { duration: 1000, easing: "ease" }
+            );
+          }
+        }, interval);
+      });
+    };
+  </script>
+</body>
+
+</html>
