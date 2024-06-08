@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Login Administered</h1>
+<label>UserName</label><br>
+<input id="username"><br>
+<label>Password</label><br>
+<input id="password"><br>
+<button onclick="myFunction()">check</button>
+
+<script>
+function myFunction() {
+   if(document.getElementById("username").value=="Admin")
+   {
+    if(document.getElementById("password").value=="Hayden")
+    {
+        alert("登录成功！");
+        location.replace("https://hayden2018666.github.io/school.github.io/admin.html")
+    } 
+    else
+    {
+      alert("你不是管理员就不要尝试了！");
+    }
+   }
+   else
+  {
+    alert("你不是管理员就不要尝试了！");
+  }
+
+
+}
+</script>
+
+</body>
+</html>
