@@ -15,10 +15,18 @@
         }
 
         body {
-            background-image: linear-gradient(to bottom right, rgb(114, 135, 254), rgb(130, 88, 186));
+            background: url(https://raw.githubusercontent.com/Hayden2018666/school.github.io/main/Timecolock/M06.jpg) no-repeat;
         }
 
-  	background: url(https://raw.githubusercontent.com/Hayden2018666/school.github.io/main/Timecolock/M06.jpg) no-repeat;
+        .login-container {
+            width: 600px;
+            height: 315px;
+            margin: 0 auto;
+            margin-top: 10%;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px 0px rbg(59,45,159);
+            background-color: rgb(95, 76, 194);
+        }
 
         .left-container {
             display: inline-block;
@@ -122,23 +130,59 @@
     </style>
 </head>
 <body>
-    <h1>第二主页</h1>
-	<h2>当前为基础测试阶段，存在大量错误和bug属于正常现象</h2>
+
+    <h1>HaydenNET</h1>
+    <h2>内部测试副本</h2>
     <div class="login-container">
+        <div class="login-container">
+            <div class="left-container">
+                <div class="title"><span>登录</span></div>
+                <div class="input-container">
 
-	通知:
-	服务器更新维护时间6月5日23:00-23:59
-	
-	<button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/exerise.html'">登录</button>
-	<!--https://hayden2018666.github.io/school.github.io/exerise.html-->
-	
-
-	<div id="loader-mask"><div id="loader"></div><noscript><h3 id="loader-js">请启用JavaScript</h3></noscript><h3 id="loader-source">请使用GoogleChrome或	MicrosoftEdge浏览器</h3><div id="loader-tips-outdated" hidden><h2>您可能在使用不受支持的<span style="color: #f00">过时</span>浏览器，这可能导致此应用无法正常工	作。</h2><h3>如果您使用双核浏览器，您可以尝试切换到 <span style="color: #f00">“极速模式”</span> 解决此问题。</h3><h3>或者，您可以尝试更换下方的几个浏览器之	一。</h3></div><h3 id="loader-tips-timeout" hidden>音乐解锁采用了一些新特性！建议使用 <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Microsoft 	Edge Chromium</a> <a href="https://www.google.cn/chrome/" target="_blank">Google Chrome</a> <a href="https://www.firefox.com.cn/" target="_blank">Mozilla 	Firefox</a> | <a href="https://git.unlock-music.dev/um/web/wiki/使用提示" target="_blank">使用提示</a></h3></div><div id="app"></div><script src="./loader.js">	</script><script src="js/chunk-vendors.5db7ca01.js"></script><script src="js/app.e29ffaed.js"></script>
-
-	友情链接
+                    <input id="username"placeholder="用户名">
+                    <input id="password" placeholder="密码"><br />
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="regist-container">
+                    <span class="regist">操作</span>
+                </div>
+                <div class="action-container">
+                    <button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/check.html'">管理员登录</button>
+                    <button onclick="myFunction()">提交</button>
+                </div>
+            </div>
+        </div>
     </div>
-	<button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/Timecolock/Timecolock.HTML'">网页全屏时钟</button>
-	<button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/CheckPerson/CheckPerson.html'">抽一抽大师</button>
+    <script>//密码判定
+        function myFunction() {
+            if (document.getElementById("username").value == "User1") {
+                if (document.getElementById("password").value == "123") {
+                    alert("欢迎Guest1登录");
+                    location.replace("https://hayden2018666.github.io/school.github.io/exerise.html")
+                }
+                else {
+                    alert("密码或用户名错误！");//密码
+                }
+            }
+            else {//用户名
+                alert("密码或用户名错误！");
+            }
+        }
+    </script>
+
+
+    <!--https://hayden2018666.github.io/school.github.io/exerise.html-->
+
+
+    <div id="loader-mask"><div id="loader"></div><noscript><h3 id="loader-js">请启用JavaScript</h3></noscript><h3 id="loader-source">请使用GoogleChrome或	MicrosoftEdge浏览器</h3><div id="loader-tips-outdated" hidden><h2>您可能在使用不受支持的<span style="color: #f00">过时</span>浏览器，这可能导致此应用无法正常工	作。</h2><h3>如果您使用双核浏览器，您可以尝试切换到 <span style="color: #f00">“极速模式”</span> 解决此问题。</h3><h3>或者，您可以尝试更换下方的几个浏览器之	一。</h3></div><h3 id="loader-tips-timeout" hidden>建议使用 <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">Microsoft 	Edge Chromium</a> <a href="https://www.google.cn/chrome/" target="_blank">Google Chrome</a> <a href="https://www.firefox.com.cn/" target="_blank">Mozilla 	Firefox</a> | <a href="https://git.unlock-music.dev/um/web/wiki/使用提示" target="_blank">使用提示</a></h3></div><div id="app"></div>
+    <script src="./loader.js"></script>
+    <script src="js/chunk-vendors.5db7ca01.js"></script>
+    <script src="js/app.e29ffaed.js"></script>
+
+    友情链接
+    <button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/Timecolock/Timecolock.HTML'">网页全屏时钟</button>
+    <button onclick="window.location.href='https://hayden2018666.github.io/school.github.io/CheckPerson/CheckPerson.html'">抽一抽大师</button>
 </body>
 
 </html>
